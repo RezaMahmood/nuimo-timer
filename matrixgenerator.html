@@ -1,136 +1,188 @@
 <html>
 <head>
-	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-	<style>
-		.pixel  {margin:2px;width:30px;height:30px;float:left;border:1px solid #888888;background-color:#ffffff;}
-		#main {width:330px;margin:0px auto;text-align:center;}
-	
-	</style>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.5.12/dist/clipboard.min.js"></script>
+    <style>
+        .pixel {
+            margin: 2px;
+            width: 30px;
+            height: 30px;
+            float: left;
+            border: 1px solid black;
+            background-color: white;
+        }
+
+        #main {
+            width: 330px;
+            margin: 0px auto;
+            text-align: center;
+        }
+
+        .black {
+            margin: 2px;
+            width: 30px;
+            height: 30px;
+            float: left;
+            border: 1px solid white;
+            background-color: black;
+        }
+    </style>
 </head>
 <body>
-	<div id="main">
-	<div class="pixel" onclick="togglePixel(this);" id="1:1"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="2:1"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="3:1"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="4:1"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="5:1"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="6:1"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="7:1"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="8:1"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="9:1"></div>
+    <div id="main">
+        <div class="pixel" onclick="togglePixel(this);" id="1:1"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="2:1"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="3:1"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="4:1"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="5:1"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="6:1"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="7:1"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="8:1"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="9:1"></div>
 
-	<div class="pixel" onclick="togglePixel(this);" id="1:2"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="2:2"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="3:2"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="4:2"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="5:2"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="6:2"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="7:2"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="8:2"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="9:2"></div>
-	
-	<div class="pixel" onclick="togglePixel(this);" id="1:3"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="2:3"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="3:3"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="4:3"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="5:3"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="6:3"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="7:3"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="8:3"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="9:3"></div>
-	
-	<div class="pixel" onclick="togglePixel(this);" id="1:4"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="2:4"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="3:4"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="4:4"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="5:4"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="6:4"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="7:4"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="8:4"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="9:4"></div>
-	
-	<div class="pixel" onclick="togglePixel(this);" id="1:5"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="2:5"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="3:5"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="4:5"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="5:5"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="6:5"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="7:5"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="8:5"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="9:5"></div>
-	
-	<div class="pixel" onclick="togglePixel(this);" id="1:6"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="2:6"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="3:6"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="4:6"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="5:6"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="6:6"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="7:6"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="8:6"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="9:6"></div>
-	
-	<div class="pixel" onclick="togglePixel(this);" id="1:7"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="2:7"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="3:7"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="4:7"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="5:7"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="6:7"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="7:7"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="8:7"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="9:7"></div>
-	
-	<div class="pixel" onclick="togglePixel(this);" id="1:8"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="2:8"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="3:8"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="4:8"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="5:8"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="6:8"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="7:8"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="8:8"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="9:8"></div>
-	
-	<div class="pixel" onclick="togglePixel(this);" id="1:9"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="2:9"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="3:9"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="4:9"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="5:9"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="6:9"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="7:9"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="8:9"></div>
-	<div class="pixel" onclick="togglePixel(this);" id="9:9"></div>
-	
-</div>
-	<input type="text" id="output">
-	<script type="text/javascript">
-	function togglePixel(id) {
-	    var colour = $(id).css("background-color");
-	    if (colour == 'rgb(0, 0, 0)') {
-	        colour = 'rgb(255, 255, 255)'
-	    } else {
-	        colour = 'rgb(0,0,0)'
-	    }
-	    $(id).css("background-color", colour);
-	    writeCode()
-	}
+        <div class="pixel" onclick="togglePixel(this);" id="1:2"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="2:2"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="3:2"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="4:2"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="5:2"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="6:2"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="7:2"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="8:2"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="9:2"></div>
 
-	function writeCode() {
-	    var colour;
-	    var x;
-	    var y;
-	    var code = "";
-	    for (var y = 1; y <= 9; y++) {
-	        for (var x = 1; x <= 9; x++) {
-	            colour = $("#" + x + "\\:" + y).css("background-color");
-	            if (colour == 'rgb(0, 0, 0)') {
-	                code = code + "*"
-	            } else {
-	                code = code + " "
-	            }
-	        }
-	    }
-	    $("#output").val(code)
-	}
-	
-	</script>
+        <div class="pixel" onclick="togglePixel(this);" id="1:3"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="2:3"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="3:3"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="4:3"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="5:3"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="6:3"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="7:3"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="8:3"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="9:3"></div>
+
+        <div class="pixel" onclick="togglePixel(this);" id="1:4"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="2:4"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="3:4"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="4:4"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="5:4"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="6:4"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="7:4"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="8:4"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="9:4"></div>
+
+        <div class="pixel" onclick="togglePixel(this);" id="1:5"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="2:5"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="3:5"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="4:5"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="5:5"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="6:5"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="7:5"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="8:5"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="9:5"></div>
+
+        <div class="pixel" onclick="togglePixel(this);" id="1:6"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="2:6"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="3:6"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="4:6"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="5:6"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="6:6"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="7:6"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="8:6"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="9:6"></div>
+
+        <div class="pixel" onclick="togglePixel(this);" id="1:7"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="2:7"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="3:7"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="4:7"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="5:7"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="6:7"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="7:7"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="8:7"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="9:7"></div>
+
+        <div class="pixel" onclick="togglePixel(this);" id="1:8"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="2:8"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="3:8"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="4:8"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="5:8"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="6:8"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="7:8"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="8:8"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="9:8"></div>
+
+        <div class="pixel" onclick="togglePixel(this);" id="1:9"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="2:9"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="3:9"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="4:9"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="5:9"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="6:9"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="7:9"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="8:9"></div>
+        <div class="pixel" onclick="togglePixel(this);" id="9:9"></div>
+
+    </div>
+    <input type="text" id="output">
+    <button class="btn" data-clipboard-target="#output">Copy</button>
+<button id="reset" onclick="resetPixels(); resetOutput();">Reset</button>
+    <button id="load" onclick="loadPixels()">Load</button>
+    <script type="text/javascript">
+
+        new Clipboard('.btn');
+
+        function loadPixels() {
+            // reset the board
+            resetPixels();
+            var counter = 0;
+            var objectToLoad = $('#output').val().split("");
+            console.log(objectToLoad);
+
+            window.iteratePixels(function(element) {
+                if (objectToLoad[counter] == "*") {
+                    element.addClass('black');
+                }
+
+                counter++;
+            });
+        }
+
+        function resetPixels() {
+            window.iteratePixels(function (element) {
+                element.removeClass('black');
+            });
+        }
+
+        function resetOutput() {
+            $('#output').val("");
+        }
+
+        function togglePixel(id) {
+            $(id).toggleClass('black');
+            updateMatrixCode();
+        }
+
+        function iteratePixels(doSomething) {
+            for (var y = 1; y <= 9; y++) {
+                for (var x = 1; x <= 9; x++) {
+                    var element = $("#" + x + "\\:" + y);
+                    doSomething(element);
+                }
+            }
+        }
+
+        function updateMatrixCode() {
+            var output = '';
+            window.iteratePixels(function (element) {
+                if (element.attr('class') == 'pixel black') {
+                    output = output + "*";
+                } else {
+                    output = output + " ";
+                }
+            });
+
+            $('#output').val(output);
+        }
+
+
+    </script>
 </body>
 </html>
